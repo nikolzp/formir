@@ -4,11 +4,26 @@
 	<title></title>
 </head>
 <body>
-
 {%for a in resp%}
-<tr>
-	<td>{{a.begin_course}}</td>
-</tr>
+<table border="1"><br>
+	{{ li.append(a.name_course) }}
+	{% if a.name_course not in li%}
+	<p><tr> </tr></p>
+	<p><tr>{{a.description}}</tr></p>
+{% endif %}
+	<p><tr>{{a.short_description}}</tr></p>
+	<tr>
+		<td>{{a.price}}</td>
+		<td>{{a.price_month}}</td>
+		<td>{{a.sale}}</td>
+		<td>{{a.begin_course}}</td>
+		<td>{{a.day_lesson}}</td>
+		<td>{{a.time_lesson}}</td>
+		<td>{{a.place_course}}</td>
+		<td>{{a.coach}}</td>
+	</tr>
+
+</table>
 {%endfor%}
 
 </body>

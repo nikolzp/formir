@@ -5,4 +5,7 @@ from designshool.models import DesignShool
 
 def det(request):
 	resp = DesignShool.objects.all()
-	return render(request, 'designshool/detail.html', {'resp':resp})
+	li = []
+	for a in DesignShool.objects.get().name_course(id=id+1):
+		li.append(a)
+	return render(request, 'designshool/detail.html', {'resp':resp, 'li':li})
