@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from designshool.views import det
+from designshool import views
 
 urlpatterns = [
-	url(r'^$', det, name='detail'),
+	url(r'^$', views.det, name='detail'),
 ]

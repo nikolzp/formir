@@ -5,4 +5,4 @@ from designshool.models import DesignShool
 
 def det(request):
 	resp = DesignShool.objects.all()
-	return render(request, 'detail.html', {'resp':resp})
+	return render(request, 'designshool/detail.html', {'resp':resp})
