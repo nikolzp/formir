@@ -6,11 +6,8 @@
 <body>
 {%for a in resp%}
 <table border="1"><br>
-	{{ li.append(a.name_course) }}
-	{% if a.name_course not in li%}
-	<p><tr> </tr></p>
+	<p><tr> {{a.name_course}} </tr></p>
 	<p><tr>{{a.description}}</tr></p>
-{% endif %}
 	<p><tr>{{a.short_description}}</tr></p>
 	<tr>
 		<td>{{a.price}}</td>
@@ -22,9 +19,11 @@
 		<td>{{a.place_course}}</td>
 		<td>{{a.coach}}</td>
 	</tr>
-
 </table>
 {%endfor%}
+
+{{ li }}
+
 
 </body>
 </html>
