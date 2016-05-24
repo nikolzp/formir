@@ -4,12 +4,13 @@
 	<title></title>
 </head>
 <body>
-{%for a in resp%}
 <table border="1"><br>
-	<p><tr> {{a.name_course}} </tr></p>
-	<p><tr>{{a.description}}</tr></p>
-	<p><tr>{{a.short_description}}</tr></p>
+{% for s in zagl %}
+	<p><tr> {{s.name_course}} </tr></p>
+	<p><tr>{{s.description}}</tr></p>
+	{% for a in det %}
 	<tr>
+		<td>{{a.short_description}}</td>
 		<td>{{a.price}}</td>
 		<td>{{a.price_month}}</td>
 		<td>{{a.sale}}</td>
@@ -19,12 +20,10 @@
 		<td>{{a.place_course}}</td>
 		<td>{{a.coach}}</td>
 	</tr>
+    {% endfor %}
 </table>
-{%endfor%}
-
-{{ li }}
-
-
+{% endfor %}
+<br>
 </body>
 </html>
 

@@ -2,10 +2,15 @@
 from django.db import models
 from coaches.models import Coach
 
-
-class DesignShool(models.Model):
+class DesignShoolMain(models.Model):
 	name_course = models.CharField(verbose_name='название курса', max_length=255)
 	description = models.TextField(verbose_name='развернутое описание', null=True, blank=True)
+	def __str__ (self):
+		return self.name_course
+
+
+class DesignShoolDet(models.Model):
+	titles = models.ForeignKey(DesignShoolMain, verbose_name='название и описание', null=True, blank=True)
 	short_description = models.TextField(verbose_name='заметки', null=True, blank=True)
 	price = models.IntegerField(verbose_name='цена за курс', null=True, blank=True)
 	price_month = models.IntegerField(verbose_name='цена за месяц', null=True, blank=True)
@@ -19,4 +24,4 @@ class DesignShool(models.Model):
 	coach = models.ForeignKey(Coach, verbose_name='препод', null=True, blank=True)
 		
 	def __str__(self):
-		return self.name_course
+		return self.titles.name_course

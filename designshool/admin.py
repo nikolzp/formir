@@ -1,8 +1,12 @@
 from django.contrib import admin
-from designshool.models import DesignShool
+from designshool.models import DesignShoolDet, DesignShoolMain
 
-class DesignShoolAdmin(admin.ModelAdmin):
-	list_display = ('name_course', 'begin_course', 'day_lesson', 'time_lesson', 'coach')
+class DesignShoolDetAdmin(admin.ModelAdmin):
+	list_display = ('titles', 'begin_course', 'day_lesson', 'time_lesson', 'coach')
+
+class DesignShoolMainAdmin(admin.ModelAdmin):
+	list_display = ('name_course',)
 
 
-admin.site.register(DesignShool, DesignShoolAdmin)
+admin.site.register(DesignShoolDet, DesignShoolDetAdmin)
+admin.site.register(DesignShoolMain, DesignShoolMainAdmin)
