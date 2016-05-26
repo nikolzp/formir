@@ -3,7 +3,7 @@ from django.db import models
 from coaches.models import Coach
 
 class DesignShoolDet(models.Model):
-	short_description = models.TextField(verbose_name='заметки', null=True, blank=True)
+	duration_cours = models.CharField(verbose_name='продолжительность курса', max_length=100, null=True, blank=True)
 	price = models.IntegerField(verbose_name='цена за курс', null=True, blank=True)
 	price_month = models.IntegerField(verbose_name='цена за месяц', null=True, blank=True)
 	sale = models.CharField(verbose_name='скидка', max_length=20, null=True, blank=True)
@@ -16,8 +16,8 @@ class DesignShoolDet(models.Model):
 	coach = models.ForeignKey(Coach, verbose_name='препод', null=True, blank=True)
 		
 	def __str__(self):
-		s = '%s || %s || %s || %s  || -- ОПИСАНИЕ -- %s' % (self.price, self.begin_course, self.day_lesson, 
-			self.time_lesson, self.short_description)
+		s = '%s грн || нач занятий %s || %s || %s  || продолжитю %s' % (self.price, self.begin_course, self.day_lesson, 
+			self.time_lesson, self.duration_cours)
 		return s
 
 
