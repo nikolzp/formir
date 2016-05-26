@@ -6,6 +6,7 @@ class DesignShoolDetAdmin(admin.ModelAdmin):
 
 class DesignShoolMainAdmin(admin.ModelAdmin):
 	list_display = ('name_course',)
+	filter_vertical = ('titles',)
 
 
 admin.site.register(DesignShoolDet, DesignShoolDetAdmin)

@@ -6,8 +6,8 @@
 <body>
 {% for s in zagl %}
 <table border="1"><br>
-	<p><tr> {{s.name_course}} </tr></p>
-	<p><tr>{{s.description}}</tr></p>
+	<p> {{s.name_course}}</p>
+	<p>{{s.description}}</p>
 	{% for a in s.titles.all %}
 	<tr>
 		<td>{{a.short_description}}</td>
@@ -19,9 +19,9 @@
 		<td>{{a.time_lesson}}</td>
 		<td>{{a.place_course}}</td>
 		<td>{{a.coach}}</td>
-	</tr><br><br>
+	</tr>
     {% endfor %}
-</table>
+</table><br><br><br><br>
 {% endfor %}
 
 </body>

@@ -16,7 +16,9 @@ class DesignShoolDet(models.Model):
 	coach = models.ForeignKey(Coach, verbose_name='препод', null=True, blank=True)
 		
 	def __str__(self):
-		return self.short_description
+		s = '%s || %s || %s || %s  || -- ОПИСАНИЕ -- %s' % (self.price, self.begin_course, self.day_lesson, 
+			self.time_lesson, self.short_description)
+		return s
 
 
 class DesignShoolMain(models.Model):
