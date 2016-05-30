@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'coaches',
     'designshool',
+    'pcshool',
+    'graphshool',
+    'abrshool',
+    'buhshool',
 ]
 
 MIDDLEWARE_CLASSES = [

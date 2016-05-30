@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-{% for s in zagl %}
-<table border="1"><br>
-	<p> {{s.name_course}}</p>
-	<p>{{s.description}}</p>
-	{% for a in s.titles.all %}
-	<tr>
-		<td>{{a.duration_cours}}</td>
-		<td>{{a.price}} грн</td>
-		<td>{{a.price_month}} грн</td>
-		<td>{{a.sale}}</td>
-		<td>{{a.begin_course}}</td>
-		<td>{{a.day_lesson}}</td>
-		<td>{{a.time_lesson}}</td>
-		<td>{{a.place_course}}</td>
-		<td>{{a.coach}}</td>
-	</tr>
-    {% endfor %}
-</table><br><br><br><br>
-{% endfor %}
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}Школа Дизайна{% endblock title %}
+
+{% block naw_class_shk_d %}active{% endblock %}
+
+
+{% block zagl %}Школа Дизайна{% endblock zagl %}
 
