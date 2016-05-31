@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'graphshool',
     'abrshool',
     'buhshool',
+    'langshool',
+    'indshool',
 ]
 
 MIDDLEWARE_CLASSES = [

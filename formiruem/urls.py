@@ -23,5 +23,7 @@ urlpatterns = [
     url(r'^graphshool/', include('graphshool.urls')),
     url(r'^abrshool/', include('abrshool.urls')),
     url(r'^buhshool/', include('buhshool.urls')),
+    url(r'^langshool/', include('langshool.urls')),
+    url(r'^indshool/', include('indshool.urls')),
 
 ]

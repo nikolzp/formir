@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{% block title %}{% endblock title %}</title>
+    <title>ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ</title>
 
     <!-- Bootstrap -->
     <link href="{% static '/static/css/style.css' %}" rel="stylesheet">
@@ -46,36 +46,23 @@
 
 <div class="container">
 
-<h2 class="text-info"> {% block zagl %}{% endblock zagl %} </h2>
+<h2 class="text-info"> ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ </h2>
 
-{% for s in zagl %}
+
 <table class ="table table-condensed"><br>
-	<h3 class="text-info">{{s.name_course}}</h3>
-	<p class="text-muted">{{s.description}}</p>
-	<th class="bg-warning">Режим занятий</th>
-	<th class="bg-warning">Цена за курс</th>
-	<th class="bg-warning">Цена за месяц</th>
-	<th class="bg-warning">Скидка</th>
-	<th class="bg-warning">Старт занятий</th>
-	<th class="bg-warning">Дни недели</th>
-	<th class="bg-warning">Время занятий</th>
-	<th class="bg-warning">Филиал</th>
-	<th class="bg-warning">Препод</th>
-	{% for a in s.titles.all %}
-	<tr class="bg-success">
-		<td>{{a.duration_cours}}</td>
-		<td>{{a.price}} грн</td>
-		<td>{{a.price_month}} грн</td>
-		<td>{{a.sale}}</td>
-		<td>{{a.begin_course}}</td>
-		<td>{{a.day_lesson}}</td>
-		<td>{{a.time_lesson}}</td>
-		<td>{{a.place_course}}</td>
-		<td>{{a.coach}}</td>
-	</tr>
-    {% endfor %}
-</table>
+	<th class="bg-warning">Название курса</th>
+	<th class="bg-warning">Описание</th>
+	<th class="bg-warning">Цена за ак/ч</th>
+	<th class="bg-warning">Количество ак/ч</th>
+{% for s in zagl %}
+<tr class="bg-success">
+		<td>{{s.name_course}}</td>
+		<td>{{s.deskr}}</td>
+		<td>{{s.price}} грн</td>
+		<td>{{s.hours}}</td>
+</tr>
 {% endfor %}
+</table>
 	</div>   
 
 
