@@ -16,7 +16,7 @@ class DesignShoolDet(models.Model):
 	coach = models.ForeignKey(Coach, verbose_name='препод', null=True, blank=True)
 		
 	def __str__(self):
-		s = '%s грн || нач занятий %s || %s || %s  || продолжитю %s' % (self.price, self.begin_course, self.day_lesson, 
+		s = '%s грн || нач занятий %s || %s || %s  || продолжить %s' % (self.price, self.begin_course, self.day_lesson, 
 			self.time_lesson, self.duration_cours)
 		return s
 
