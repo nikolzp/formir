@@ -8,3 +8,6 @@ class Coach(models.Model):
 
 	def __str__(self):
 		return self.surname
+
+	class Meta:
+		verbose_name_plural = "Преподы"

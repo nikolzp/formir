@@ -15,6 +15,9 @@ class LangShoolDet(models.Model):
 		s = '%s грн || %s || %s ' % (self.price_month, self.piple, self.hours_month)
 		return s
 
+	class Meta:
+		verbose_name_plural = ""
+
 
 class LangShoolMain(models.Model):
 	name_course = models.CharField(verbose_name='название курса', max_length=255)
@@ -22,3 +25,6 @@ class LangShoolMain(models.Model):
 	titles = models.ManyToManyField(LangShoolDet, verbose_name='название и описание', blank=True)
 	def __str__ (self):
 		return self.name_course
+
+	class Meta:
+		verbose_name_plural = "Школа Иностранных Языков"

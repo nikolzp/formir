@@ -9,3 +9,5 @@ class IndShoolMain(models.Model):
 	hours = models.CharField(verbose_name='кол-во ак.час', max_length=50, blank=True)
 	def __str__ (self):
 		return self.name_course
+	class Meta:
+		verbose_name_plural = "Индивидуальные Занятия"

@@ -19,6 +19,8 @@ class PCShoolDet(models.Model):
 		s = '%s грн || нач занятий %s || %s || %s  || продолжитю %s' % (self.price, self.begin_course, self.day_lesson, 
 			self.time_lesson, self.duration_cours)
 		return s
+	class Meta:
+		verbose_name_plural = ""
 
 
 class PCShoolMain(models.Model):
@@ -27,3 +29,6 @@ class PCShoolMain(models.Model):
 	titles = models.ManyToManyField(PCShoolDet, verbose_name='название и описание', blank=True)
 	def __str__ (self):
 		return self.name_course
+
+	class Meta:
+		verbose_name_plural = "Курсы ПК"

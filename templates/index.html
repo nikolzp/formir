@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en">
@@ -7,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ</title>
+    <title>{% block title %}{% endblock title %}</title>
 
     <!-- Bootstrap -->
     <link href="{% static '/static/css/style.css' %}" rel="stylesheet">
@@ -39,37 +38,26 @@
         <li class="{% block naw_class_ABR %}{% endblock %}"><a href="{% url 'abrshool' %}">АБР</a></li>
         <li class="{% block naw_class_Buh %}{% endblock %}"><a href="{% url 'buhshool' %}">Школа Бухгалтерии</a></li>
         <li class="{% block naw_class_Ind_z %}{% endblock %}"><a href="{% url 'indshool' %}">Инд Занятия</a></li>
-      </ul>
+      </ul> 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
 
-<h2 class="text-info"> ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ </h2>
-
-
-<table class ="table table-condensed"><br>
-	<th class="bg-warning">Название курса</th>
-	<th class="bg-warning">Описание</th>
-	<th class="bg-warning">Цена за ак/ч</th>
-	<th class="bg-warning">Количество ак/ч</th>
-{% for s in zagl %}
-<tr class="bg-success">
-		<td>{{s.name_course}}</td>
-		<td>{{s.deskr|safe}}</td>
-		<td>{{s.price}} грн</td>
-		<td>{{s.hours}}</td>
-</tr>
-{% endfor %}
-</table>
-	</div>   
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Школа Дизайна</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Курсы ПК</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Графика</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">ШИЯ</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">АБР</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Школа Бухгалтерии</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Инд Занятия</a></button>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{% static '/static/js/bootstrap.min.js' %}"></script>
   </body>
 </html>
-

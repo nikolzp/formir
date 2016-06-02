@@ -14,7 +14,11 @@ class DesignShoolDet(models.Model):
 			('15:00','15:00'),('15:30','15:30'),('16:00','16:00'),('18:00','18:00'),('18:30','18:30')))
 	place_course = models.CharField(verbose_name='филиал', max_length=255, null=True, blank=True)
 	coach = models.ForeignKey(Coach, verbose_name='препод', null=True, blank=True)
-		
+	
+	class Meta:
+		verbose_name_plural = ""
+
+
 	def __str__(self):
 		s = '%s грн || нач занятий %s || %s || %s  || продолжить %s' % (self.price, self.begin_course, self.day_lesson, 
 			self.time_lesson, self.duration_cours)
@@ -27,3 +31,5 @@ class DesignShoolMain(models.Model):
 	titles = models.ManyToManyField(DesignShoolDet, verbose_name='название и описание', blank=True)
 	def __str__ (self):
 		return self.name_course
+	class Meta:
+		verbose_name_plural = "Школа Дизайна"

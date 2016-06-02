@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from formiruem.views import index
 
 urlpatterns = [
+    url(r'^$', index, name='index'), 
 	url(r'^admin/', admin.site.urls),
 	url(r'^designshool/', include('designshool.urls')),
 	url(r'^pcshool/', include('pcshool.urls')),
@@ -25,5 +27,6 @@ urlpatterns = [
     url(r'^buhshool/', include('buhshool.urls')),
     url(r'^langshool/', include('langshool.urls')),
     url(r'^indshool/', include('indshool.urls')),
+    url(r'^summernote/', include('django_summernote.urls')),
 
 ]

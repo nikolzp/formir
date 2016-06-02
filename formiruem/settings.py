@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'buhshool',
     'langshool',
     'indshool',
+    'django_summernote',
 ]
 
 MIDDLEWARE_CLASSES = [

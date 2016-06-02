@@ -1,13 +1,19 @@
 from django.contrib import admin
 from langshool.models import LangShoolDet, LangShoolMain
+from django_summernote.admin import SummernoteModelAdmin
+
+class DetInline(admin.TabularInline):
+	model = LangShoolMain.titles.through
 
 
-class LangShoolDetAdmin(admin.ModelAdmin):
+class LangShoolDetAdmin(SummernoteModelAdmin):
 	list_display = ('duration_cours', 'piple', 'regime', 'hours_month')
 
-class LangShoolMainAdmin(admin.ModelAdmin):
+
+class LangShoolMainAdmin(SummernoteModelAdmin):
 	list_display = ('name_course',)
-	filter_vertical = ('titles',)
+	exclude = ('titles',)
+	inlines = [DetInline,]
 
 
 admin.site.register(LangShoolDet, LangShoolDetAdmin)
