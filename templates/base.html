@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <a class="navbar-brand" href="{% url 'index' %}">Formir</a>
+      <a class="navbar-brand" href="{% url 'designshool' %}">Formir</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,7 +49,7 @@
 <h2 class="text-info"> {% block zagl %}{% endblock zagl %} </h2>
 
 {% for s in zagl %}
-<table class ="table table-condensed"><br>
+<table class ="table table-striped"><br>
 	<h3 class="text-info">{{s.name_course}}</h3>
 	<p>{{s.description|safe}}</p>
 	<th class="bg-warning">Режим занятий</th>
@@ -63,7 +63,7 @@
 	<th class="bg-warning">Препод</th>
 	{% for a in s.titles.all %}
 	<tr class="bg-success">
-		<td>{{a.duration_cours}}</td>
+		<td >{{a.duration_cours}}</td>
 		<td>{{a.price}} грн</td>
 		<td>{{a.price_month}} грн</td>
 		<td>{{a.sale}}</td>

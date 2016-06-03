@@ -13,7 +13,13 @@
   </head>
   <body>
 
-
+<script language="JavaScript"> 
+if (top.location.search=="") { 
+pass = prompt('Введите пароль'); 
+if (pass=='1956')
+{ alert('Пароль принят') } else { alert('Пароль непринят!'), top.location.href="/" }
+}; 
+</script>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -25,32 +31,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <a class="navbar-brand" href="{% url 'index' %}">Formir</a>
+      <a class="navbar-brand" href="#">Formir</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="{% block naw_class_shk_d %}{% endblock %}"><a href="{% url 'designshool' %}">Школа Дизайна</a></li>
-        <li class="{% block naw_class_PK %}{% endblock %}"><a href="{% url 'pcshool' %}">Курсы ПК</a></li>
-        <li class="{% block naw_class_Graph %}{% endblock %}"><a href="{% url 'graphshool' %}">Графика</a></li>
-        <li class="{% block naw_class_Shiya %}{% endblock %}"><a href="{% url 'langshool' %}">ШИЯ</a></li>
-        <li class="{% block naw_class_ABR %}{% endblock %}"><a href="{% url 'abrshool' %}">АБР</a></li>
-        <li class="{% block naw_class_Buh %}{% endblock %}"><a href="{% url 'buhshool' %}">Школа Бухгалтерии</a></li>
-        <li class="{% block naw_class_Ind_z %}{% endblock %}"><a href="{% url 'indshool' %}">Инд Занятия</a></li>
-      </ul> 
-    </div><!-- /.navbar-collapse -->
+   
   </div><!-- /.container-fluid -->
 </nav>
 
 
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Школа Дизайна</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Курсы ПК</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Графика</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">ШИЯ</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">АБР</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Школа Бухгалтерии</a></button>
-<button type="button" class="btn btn-info"><a href="{% url 'designshool' %}">Инд Занятия</a></button>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Школа Дизайна</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Курсы ПК</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Графика</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">ШИЯ</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">АБР</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Школа Бухгалтерии</button></a>
+<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Инд Занятия</button></a>
 
 
 
