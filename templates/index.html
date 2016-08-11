@@ -13,6 +13,7 @@
   </head>
   <body>
 
+<!--
 <script language="JavaScript"> 
 if (top.location.search=="") { 
 pass = prompt('Введите пароль'); 
@@ -20,6 +21,7 @@ if (pass=='1956')
 { alert('Пароль принят') } else { alert('Пароль непринят!'), top.location.href="/" }
 }; 
 </script>
+-->
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -41,12 +43,14 @@ if (pass=='1956')
 
 
 <a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Школа Дизайна</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Курсы ПК</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Графика</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">ШИЯ</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">АБР</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Школа Бухгалтерии</button></a>
-<a href="{% url 'designshool' %}"><button type="button" class="btn btn-primary">Инд Занятия</button></a>
+<a href="{% url 'pcshool' %}"><button type="button" class="btn btn-primary">Курсы ПК</button></a>
+<a href="{% url 'graphshool' %}"><button type="button" class="btn btn-primary">Графика</button></a>
+<a href="{% url 'langshool' %}"><button type="button" class="btn btn-primary">ШИЯ</button></a>
+<a href="{% url 'abrshool' %}"><button type="button" class="btn btn-primary">АБР</button></a>
+<a href="{% url 'buhshool' %}"><button type="button" class="btn btn-primary">Школа Бухгалтерии</button></a>
+<a href="{% url 'indshool' %}"><button type="button" class="btn btn-primary">Инд Занятия</button></a>
+
+<a href="{% url 'students' %}"><button type="button" class="btn btn-primary">Студенты</button></a>
 
 
 

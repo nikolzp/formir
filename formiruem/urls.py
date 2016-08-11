@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^buhshool/', include('buhshool.urls')),
     url(r'^langshool/', include('langshool.urls')),
     url(r'^indshool/', include('indshool.urls')),
+    url(r'^students/', include('students.urls')),
     url(r'^summernote/', include('django_summernote.urls')),
 
 ]
